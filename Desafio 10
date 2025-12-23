@@ -1,0 +1,28 @@
+package Desafio10;
+
+public interface ConversaoFinanceira {
+	void converterDolarParaReal(double valorDolar);
+}
+
+package Desafio10;
+
+public class ConversorMoeda implements ConversaoFinanceira {
+	@Override
+	public void converterDolarParaReal(double valorDolar) {
+		double cotacaoDolar = 4.80;
+		double valorReal = valorDolar * cotacaoDolar;
+		System.out.println("O valor em reais é: R$ " + valorReal);
+	}
+}
+
+package Desafio10;
+
+public class TesteConversorMoeda {
+
+	public static void main(String[] args) {
+		ConversorMoeda conversor = new ConversorMoeda();
+		conversor.converterDolarParaReal(50);
+
+	}
+
+}
